@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard</title>
+  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css'>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.8.13/tailwind.min.css'>
+  <link rel='stylesheet' href='https://unicons.iconscout.com/release/v3.0.6/css/line.css'>
+  <link rel="stylesheet" href="./style.css">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.0/bootstrap-table.min.css'>
+  <link rel='stylesheet'
+    href='https://rawgit.com/vitalets/x-editable/master/dist/bootstrap3-editable/css/bootstrap-editable.css'>
+  <link rel="stylesheet" href="./style.css">
+  <script type="text/javascript" src="./vue.js"></script>
+
+</head>
+
+<body class="background">
+  <!-- partial:index.partial.html -->
+  <aside class="sidebar position-fixed top-0 left-0 overflow-auto h-100 float-left" id="show-side-navigation1">
+    <i class="uil-bars close-aside d-md-none d-lg-none" data-close="show-side-navigation1"></i>
+    <div class="sidebar-header d-flex justify-content-center align-items-center px-3 py-4">
+      <img class="rounded-pill img-fluid" width="65" src="./images/avatar-1577909_960_720.webp" alt="">
+      <div class="ms-2">
+        <h5 class="fs-6 mb-0">
+          <a class="text-decoration-none" href="#">Company</a>
+        </h5>
+      </div>
+    </div>
+
+    <div class="search position-relative text-center px-4 py-3 mt-2">
+      <input type="text" class="form-control w-100 border-0 bg-transparent" placeholder="Search here">
+      <i class="fa fa-search position-absolute d-block fs-6"></i>
+    </div>
+
+    <ul class="categories list-unstyled">
+      <li class="has-dropdown">
+        <i class="uil-estate fa-fw"></i><a href="#"> Dashboard</a>
+        <ul class="sidebar-dropdown list-unstyled">
+          <li><a href="#">Lorem ipsum</a></li>
+          <li><a href="#">ipsum dolor</a></li>
+          <li><a href="#">dolor ipsum</a></li>
+          <li><a href="#">amet consectetur</a></li>
+          <li><a href="#">ipsum dolor sit</a></li>
+        </ul>
+      </li>
+
+
+      <li class="">
+        <i class="uil-setting"></i><a href="#"> Settings</a>
+        <ul class="sidebar-dropdown list-unstyled">
+          <li><a href="#">Lorem ipsum</a></li>
+          <li><a href="#">ipsum dolor</a></li>
+          <li><a href="#">dolor ipsum</a></li>
+          <li><a href="#">amet consectetur</a></li>
+          <li><a href="#">ipsum dolor sit</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <i class="uil-panel-add"></i><a href="#"> Charts</a>
+        <ul class="sidebar-dropdown list-unstyled">
+          <li><a href="#">Lorem ipsum</a></li>
+          <li><a href="#">ipsum dolor</a></li>
+          <li><a href="#">dolor ipsum</a></li>
+          <li><a href="#">amet consectetur</a></li>
+          <li><a href="#">ipsum dolor sit</a></li>
+        </ul>
+      </li>
+    </ul>
+  </aside>
+
+  <section id="wrapper">
+    <nav class="navbar navbar-expand-md">
+      <div class="container-fluid mx-2">
+        <div class="navbar-header">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#toggle-navbar"
+            aria-controls="toggle-navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="uil-bars text-white"></i>
+          </button>
+          <a class="navbar-brand" href="#">Dash<span class="main-color">board</span></a>
+          <div class="collapse navbar-collapse" id="toggle-navbar">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  Settings
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li>
+                    <a class="dropdown-item" href="#">My account</a>
+                  </li>
+                  <li><a class="dropdown-item" href="#">My inbox</a>
+                  </li>
+                  <li><a class="dropdown-item" href="#">Help</a>
+                  </li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="#">Log out</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"><i class="uil-comments-alt"></i><span>23</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"><i class="uil-bell"></i><span>98</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <i data-show="show-side-navigation1" class="uil-bars show-side-btn"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+    <div class="p-4">
+
+      <section id="top-cards" class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full max-w-6xl">
+        <div class="relative p-5 bg-gradient-to-r from-teal-400 to-green-500 rounded-md overflow-hidden">
+          <div class="relative z-10 mb-4 text-white text-4xl leading-none font-semibold">$556,581.14</div>
+          <div class="relative z-10 text-green-200 leading-none font-semibold">Current Week Income</div>
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"
+            class="absolute right-0 bottom-0 h-32 w-32 -mr-8 -mb-8 text-green-600 opacity-50">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+        </div>
+        <div class="relative p-5 bg-gradient-to-r from-blue-400 to-blue-600 rounded-md overflow-hidden">
+          <div class="relative z-10 mb-4 text-white text-4xl leading-none font-semibold">1104</div>
+          <div class="relative z-10 text-blue-200 leading-none font-semibold">Orders Shipped</div>
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"
+            class="absolute right-0 bottom-0 h-32 w-32 -mr-8 -mb-8 text-blue-700 opacity-50">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+          </svg>
+        </div>
+        <div class="relative p-5 bg-gradient-to-r from-red-400 to-red-600 rounded-md overflow-hidden">
+          <div class="relative z-10 mb-4 text-white text-4xl leading-none font-semibold">5446</div>
+          <div class="relative z-10 text-red-200 leading-none font-semibold">Orders Delivered</div>
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"
+            class="absolute right-0 bottom-0 h-32 w-32 -mr-8 -mb-8 text-red-700 opacity-50">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+          </svg>
+        </div>
+        <div class="relative p-5 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-md overflow-hidden">
+          <div class=" mb-4 text-white text-4xl leading-none font-semibold">97.00%</div>
+          <div class="text-yellow-200 leading-none font-semibold">Retention rate</div>
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"
+            class="absolute right-0 bottom-0 h-32 w-32 -mr-8 -mb-8 text-yellow-700 opacity-50">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+            </svg>
+          </svg>
+        </div>
+      </section>
+
+      <section id="cards2" class="grid  lg:grid-cols-3 gap-6 w-full max-w-full">
+        <div id="box1" class="col-md-4">
+          <div class="box__header">
+            <h3 class="box__header-title">INVENTORY</h3>
+          </div>
+          <div class="box__body">
+            <div class="stats stats--main">
+              <div class="stats__amount" id='counter'>
+                39357
+              </div>
+              <div class="stats__caption">MIAMI</div>
+              <div class="stats__change">
+                <div class="stats__value stats__value--negative">-43</div>
+                <div class="stats__period">this week</div>
+              </div>
+            </div>
+            <div class="stats stats--main">
+              <div class="stats__amount" id='counter'>
+                14515
+              </div>
+              <div class="stats__caption">TORONTO</div>
+              <div class="stats__change">
+                <div class="stats__value stats__value--negative">-82</div>
+                <div class="stats__period">this week</div>
+              </div>
+            </div>
+            <div class="stats stats--main">
+              <div class="stats__amount" id='counter'>
+                4578
+              </div>
+              <div class="stats__caption">MEXICO CITY</div>
+              <div class="stats__change">
+                <div class="stats__value stats__value--positive">+25</div>
+                <div class="stats__period">this week</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div id="box2" class="col-md-4">
+          <div class="box__header">
+            <h3 class="box__header-title">STATISTICS</h3>
+          </div>
+          <div class="box__body">
+            <div class="stats stats--main">
+              <div class="stats__amount" id='counter'>
+                12163
+              </div>
+              <div class="stats__caption">ORDERS</div>
+              <div class="stats__change">
+                <div class="stats__value stats__value--positive">+6%</div>
+                <div class="stats__period">this week</div>
+              </div>
+            </div>
+
+            <div class="stats">
+              <div class="stats__amount">87359</div>
+              <div class="stats__caption">VISITORS</div>
+              <div class="stats__change">
+                <div class="stats__value stats__value--negative">-12%</div>
+                <div class="stats__period">this week</div>
+              </div>
+            </div>
+
+            <div class="stats">
+              <div class="stats__amount">4582</div>
+              <div class="stats__caption">SHIPPED</div>
+              <div class="stats__change">
+                <div class="stats__value stats__value--positive">+33%</div>
+                <div class="stats__period">this week</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="chart1" class="col-md-4">
+          <div class="box mt-4">
+            <div class="box__header">
+              <h3 class="box__header-title" style="color: #fff;">UNITS</h3>
+            </div>
+            <div class="mt-4">
+              <div id="progress1"></div>
+            </div>
+            <div class="mt-4">
+              <div id="progress2"></div>
+            </div>
+            <div class="mt-4">
+              <div id="progress3"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <div class="col-md-13">
+        <div id="chart3" class="box  mt-4">
+          <div id="linechart"> </div>
+        </div>
+
+        <div id="inv-box">
+          <h1 id="inv">ACTIVE INVENTORY</h1>
+          <table id="table" data-toggle="table" data-search="true" data-filter-control="true" data-show-export="true"
+            data-click-to-select="true" data-toolbar="#toolbar">
+            <thead>
+              <tr>
+                <th data-field="state" data-checkbox="true"></th>
+                <th data-field="prenom" data-filter-control="input" data-sortable="true">Product</th>
+                <th data-field="date" data-filter-control="select" data-sortable="true">SKU Number</th>
+                <th data-field="examen" data-filter-control="select" data-sortable="true">Location</th>
+                <th data-field="note" data-sortable="true">Units Available</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="bs-checkbox "><input data-index="0" name="btSelectItem" type="checkbox"></td>
+                <td>Red Shoes</td>
+                <td>4654654654</td>
+                <td>Toronto</td>
+                <td>214</td>
+              </tr>
+              <tr>
+                <td class="bs-checkbox "><input data-index="1" name="btSelectItem" type="checkbox"></td>
+                <td>Blue Shoes</td>
+                <td>46546545</td>
+                <td>Mexico City</td>
+                <td>457</td>
+              </tr>
+              <tr>
+                <td class="bs-checkbox "><input data-index="2" name="btSelectItem" type="checkbox"></td>
+                <td>Green Shoes</td>
+                <td>4589874651</td>
+                <td>Mexico City</td>
+                <td>987</td>
+              </tr>
+              <tr>
+                <td class="bs-checkbox "><input data-index="3" name="btSelectItem" type="checkbox"></td>
+                <td>Yellow Shoes</td>
+                <td>9879896464</td>
+                <td>Mexico City</td>
+                <td>478</td>
+              </tr>
+              <tr>
+                <td class="bs-checkbox "><input data-index="4" name="btSelectItem" type="checkbox"></td>
+                <td>Purple Shoes</td>
+                <td>656598765</td>
+                <td>Miami</td>
+                <td>65</td>
+              </tr>
+              <tr>
+                <td class="bs-checkbox "><input data-index="7" name="btSelectItem" type="checkbox"></td>
+                <td>Purple Shoes</td>
+                <td>01/10/2015</td>
+                <td>Mexico City</td>
+                <td>8/20</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.bundle.js'></script>
+      <script
+        src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.jshttps://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js'></script>
+      <script src='https://unpkg.com/vue@next'></script>
+      <script src='https://cdn.jsdelivr.net/npm/apexcharts'></script>
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+      <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.0/bootstrap-table.js'></script>
+      <script
+        src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.9.1/extensions/editable/bootstrap-table-editable.js'></script>
+      <script
+        src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.9.1/extensions/export/bootstrap-table-export.js'></script>
+      <script src='https://rawgit.com/hhurz/tableExport.jquery.plugin/master/tableExport.js'></script>
+      <script
+        src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.9.1/extensions/filter-control/bootstrap-table-filter-control.js'></script>
+      <script src="./script.js"></script>
+      <script type="module" src="./script.js"></script>
+      <script type="module" src="./app.js"></script>
+
+
+
+</body>
+
+</html>
